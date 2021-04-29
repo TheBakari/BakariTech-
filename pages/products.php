@@ -18,15 +18,15 @@ $db->connect();
     <script src="../jscript/_jscriptFunctions.js"></script>
     <link href="../css/icons/all.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Proizvodi | Bakaritech</title>
+    <title>Proizvodi | BakariTech</title>
 </head>
 <body>
-    
-    <!-- header where is logo, search, viber, whatsup-->
-        <?php
+
+    <!-- header where is logo, search, login and register-->
+    <?php
             include("header.php");
-        ?>
-    <!-- end of header where is logo, search, viber, whatsup-->
+    ?>
+    <!-- end of header where is logo, search, login and register--->
 
     <!-- navigation of categories and navigation for login-->
         <?php

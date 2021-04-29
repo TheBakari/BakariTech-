@@ -18,7 +18,7 @@ $db->connect();
     <script src="../jscript/_jscriptFunctions.js"></script>
     <link href="../css/icons/all.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Proizvodi | Bakaritech</title>
+    <title>Proizvodi | BakariTech</title>
 </head>
 <body>
 <!-- header where is logo, search, login and registry-->
@@ -79,6 +79,7 @@ $brand=$_GET['brand'];
 
         <!-- Right side with showing products-->
         <div class="col-xl-10 col-lg-10 col-md-8 col-sm-8 col-12">
+        <div class="filter_wrapper">
         <div class="row" id="result" style="padding-bottom: 95px;">
         <?php
         $sql="SELECT * FROM specification WHERE category='{$category}' AND products_brand='{$brand}'";
@@ -87,7 +88,7 @@ $brand=$_GET['brand'];
         {
         ?>
                 <!--Products cards-->
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 filter_data">
                         <div class="card-deck">
                         <div class="card  shadow border-light">
                                 <img id="product" class="card-img-top" src='../pics/<?= $row['specification_id'];?>,v.jpg' alt='Responsive image'>
@@ -97,7 +98,7 @@ $brand=$_GET['brand'];
                                         <?= $row['products_brand']; ?><br>
                                         <?= $row['products_model']; ?><br>
                                 </p>
-                                <span class="viewMore"><a class="btn btn-warning btn-block " href="productinfo.php?kategorija=<?= $row['category'] ?>&sifraProizvoda=<?= $row['specification_id'] ?>">Više&nbsp;&raquo;</a></span>
+                                <span class="viewMore"><a class="btn btn-warning btn-block " href="../<?= $row['category'] ?>/<?= $row['specification_id'] ?>">Više&nbsp;&raquo;</a></span>
                                 </div>
                         </div>
                         </div>
@@ -105,6 +106,7 @@ $brand=$_GET['brand'];
         <?php
         }
         ?>
+        </div>
         </div>
         </div>
 

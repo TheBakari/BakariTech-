@@ -19,7 +19,7 @@ $db->connect();
     <script src="jscript/jscriptFunctions.js"></script>
     <link href="css/icons/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <title>Početna | BorisTech</title>
+    <title>Početna | BakariTech</title>
 </head>
 <body>
 

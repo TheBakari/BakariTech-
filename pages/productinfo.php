@@ -19,14 +19,14 @@ $db->connect();
     <script src="../jscript/_jscriptFunctions.js"></script>
     <link href="../css/icons/all.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Proizvodi | Bakaritech</title>
+    <title>Proizvodi | BakariTech</title>
 </head>
 <body>
     
 <!-- header where is logo, search, login and register-->
 <?php
         include("header.php");
-    ?>
+?>
 <!-- end of header where is logo, search, login and register--->
 
 <!-- categories-->
@@ -39,8 +39,12 @@ $db->connect();
 <!-- main products-->
 <div class="container" id="product_info">
 <?php
-$id=$_GET['sifraProizvoda']; 
-$category=$_GET['kategorija'];
+if(isset($_GET['sifraProizvoda']) AND isset($_GET['kategorija']))
+{
+   $id=$_GET['sifraProizvoda']; 
+   $category=$_GET['kategorija']; 
+}
+
 ?>
 <?php
     $query="SELECT * FROM specification WHERE category='{$category}' AND specification_id='{$id}'";

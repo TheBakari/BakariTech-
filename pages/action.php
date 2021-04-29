@@ -19,7 +19,7 @@ if(isset($_POST['action']))
         while($row=$db->fetch_object($rez))
         {
             $output .='
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 filter_data">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6 filter_data">
                     <div class="card-deck">
                     <div class="card  shadow border-light">
                             <img id="product" class="card-img-top" src="../pics/'.$row->specification_id.',v.jpg" alt="Responsive image">
@@ -29,7 +29,7 @@ if(isset($_POST['action']))
                                     '.$row->products_brand.'<br>
                                     '.$row->products_model.'<br>
                             </p>
-                            <span class="viewMore"><a class="btn btn-warning btn-block " href="pages/productinfo.php?kategorija='.$row->category.'&sifraProizvoda='.$row->specification_id.'">Više&nbsp;&raquo;</a></span>
+                            <span class="viewMore"><a class="btn btn-warning btn-block " href="../'.$row->category.'/'.$row->specification_id.'">Više&nbsp;&raquo;</a></span>
                             </div>
                     </div>
                     </div>
